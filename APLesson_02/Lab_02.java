@@ -7,7 +7,7 @@ public class Lab_02
 		int recArea=l*w;
 		 
 	    System.out.println("The area of your rectangle is " + recArea);
-		String name = "Elane Moon";
+		String name =" Elane Moon";
 		String address = " 6485 Cypress Meadows Trail";
 		String city = " San Diego, CA";
 		String zipcode = " 92130";
