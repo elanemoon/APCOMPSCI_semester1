@@ -8,17 +8,17 @@ public class bmi
 		Scanner keyboard = new Scanner(System.in);
 		
 		//prompts for user input
-		System.out.println("What is your height in meters?");
+		System.out.println("What is your height in inches?");
 		
-		double meters = keyboard.nextDouble();
+		double inches = keyboard.nextDouble();
 		System.out.println("Ok.");
 		
-		System.out.println("What is your weight in kg?");
+		System.out.println("What is your weight in lb?");
 		
-		double kg = keyboard.nextDouble();
+		double lb = keyboard.nextDouble();
 		System.out.println("Ok.");
 		
-		double BMI =  kg /( meters * meters);
+		double BMI =  lb /( inches * inches);
 		System.out.println(BMI);
 	}
 	    
