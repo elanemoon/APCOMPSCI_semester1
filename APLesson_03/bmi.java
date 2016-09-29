@@ -18,7 +18,7 @@ public class bmi
 		double lb = keyboard.nextDouble();
 		System.out.println("Ok.");
 		
-		double BMI =  lb /( inches * inches);
+		double BMI =  703 * (lb /( inches * inches));
 		System.out.println(BMI);
 	}
 	    
