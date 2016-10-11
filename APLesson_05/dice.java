@@ -26,6 +26,7 @@ public class dice
 		{
 			winner = "computer";
 		}
+		
 		return winner;
 	}
 }
