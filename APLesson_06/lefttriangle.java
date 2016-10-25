@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class reversetriangle
+public class lefttriangle
 {
 	public static void main(String[]args)
 	{
@@ -7,9 +7,9 @@ public class reversetriangle
 		System.out.println("Please enter a word: ");
 		String word = kb.next();
 		
-		for(int i = word.length(); i >=0; i--)
+		for(int i = 0; i <= word.length(); i++)
 		{
-			System.out.println(word.substring(0,i));
+			System.out.println(word.substring(i));
 		}
 	}
 }
