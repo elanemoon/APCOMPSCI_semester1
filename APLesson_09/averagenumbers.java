@@ -15,12 +15,12 @@ public class averagenumbers
 		System.out.println();
 		System.out.println( "The average of the above numbers is... " + average(numbers));
 	}
-	public static void average(int [] numbers)
+	public static int average(int [] numbers)
 	{
 		int average = 0;
 		for(int number : numbers)
 		{
-		 return	number + sum; 
+		 return	average += number;
 		}
 		return average/ 10;
 	}
