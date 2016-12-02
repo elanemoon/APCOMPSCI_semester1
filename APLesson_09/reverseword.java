@@ -6,7 +6,7 @@ public class reverseword
 		
 		String[] names = new String[5];
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Please enter 5 names: ");
+		System.out.println("Please enter 5 words: ");
 	
 		for(int i = 0; i < names.length; i++)
 		{

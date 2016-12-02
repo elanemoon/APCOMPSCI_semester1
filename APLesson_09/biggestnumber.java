@@ -1,7 +1,8 @@
 import java.util.Scanner;
-public class getodds
+public class biggestnumber
 {   
     static int [] numbers;
+	static int max;
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
@@ -9,7 +10,7 @@ public class getodds
 		fillArray();
 		System.out.println(" For the following numbers...");
 		printArray();
-		System.out.println("The" + getOdds() + " are odd numbers" );
+		System.out.println( "The biggest number is " + getBiggest() );
 	}
 	public static void fillArray()
 	{
@@ -25,16 +26,15 @@ public class getodds
 			System.out.println(num);	
 		}
 	}
-     public static String getOdds()
+     public static int getBiggest()
 	 { 
-	 String odds = "  ";
 	 for(int num: numbers)
 	 {
-		 if(num % 2 != 0)
+		 if(num > max)
 		 {
-			 odds += (" " + num);
+			 max = num;
 		 }
 	 }
-	 return odds;	
+	 return max;	
 	 }
 }
