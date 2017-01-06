@@ -2,14 +2,15 @@ import java.util.Scanner;
 public class gamegun
 {
 	static int bulletCount;
-	static int clipsize;
+	static int clipsize = 16;
 	static int shotCount;
 	static String [] clip;
 	public static void main(String[]args)
 	{
 		bulletCount = 96;
 		shotCount = 0;
-		clip = String[]
+		clip = String[];
+		String.length = clipsize;
 		resetClip();
 		while(bulletCount >= 0 || shotCount >= 0)
 		{
@@ -22,10 +23,11 @@ public class gamegun
 			System.out.println(shoot());
 		}
 		System.out.println(printClip());	
+		System.out.println("Out of Bullets!!!");
 	}
 	public static void resetClip()
 	{
-		for(int i = 0; i < clip[i].length; i ++)
+		for(int i = 0; i < clip[i].length; i++)
 		{
 			clip[i] = "[]";
 		}
