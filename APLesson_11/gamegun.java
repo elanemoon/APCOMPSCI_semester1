@@ -9,25 +9,28 @@ public class gamegun
 	{
 		bulletCount = 96;
 		shotCount = 0;
-		clip = String[];
-		String.length = clipsize;
+		clip = new String[clipsize];
 		resetClip();
-		while(bulletCount >= 0 || shotCount >= 0)
+		while(bulletCount > 0 || shotCount > 0)
 		{
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Action:");
 		String action = kb.nextLine();
-		if(action == "R")
+		if(action.equals("R"))
+		{
 			reload();
-		if(action == "S")
+		}
+		if(action.equals("S"))
+		{
 			System.out.println(shoot());
 		}
-		System.out.println(printClip());	
+		printClip();
+		}
 		System.out.println("Out of Bullets!!!");
 	}
 	public static void resetClip()
 	{
-		for(int i = 0; i < clip[i].length; i++)
+		for(int i = 0; i < clip.length; i++)
 		{
 			clip[i] = "[]";
 		}
@@ -54,16 +57,19 @@ public class gamegun
 		else
 			shotCount = bulletCount;
 		    bulletCount = 0;
-	}
-	 resetClip();
-	   for(int i = 0; i < shotCount; i ++)
+			
+		resetClip();
+		for(int i = 0; i < shotCount; i ++)
 		   clip[i] = " * ";
+	}
+	
 	public static void printClip()
 	{
-		String output = " ";
-		System.out.println("Bullets: " + \t bulletCount + \n "Clip: " \t);
+		String output = "";
+		System.out.println("Bullets: " + "\t" + bulletCount + "\n" + "Clip: " + "\t");
 		for(int i = 0; i < clipsize; i ++)
-			clip[i] += output;
+			output += clip[i];
+		System.out.println(output);
 	}
-	print output;
+	
 }
