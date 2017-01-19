@@ -15,9 +15,9 @@ public class gamehealth
 		while(turn != "Q" && healthcount > 0)
 		{
 			System.out.println("Your turn! Hit Enter when ready: ");
-			turn = kb.next();
+			turn = kb.nextLine();
 			damage = (int)(Math.random()*2)+1;
-			amount = (int)(Math.random()*5)+1;
+			amount = (int)(Math.random()*6)+1;
 			takeDamage(damage, amount);
 			printClip();
 		}
