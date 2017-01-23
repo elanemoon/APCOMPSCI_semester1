@@ -15,6 +15,10 @@ public class humandriver
 		System.out.println("Hair: " + object.getHair());
 		System.out.println("Eyes: " + object.getEyes());
 		System.out.println("Skin: " + object.getSkin());
-		
+		object.setHES("blond", "blue", "light");
+		System.out.println("Friend's info...");
+		System.out.println("Hair: " + object.getHair());
+		System.out.println("Eyes: " + object.getEyes());
+		System.out.println("Skin: " + object.getSkin());
 	}
 }
