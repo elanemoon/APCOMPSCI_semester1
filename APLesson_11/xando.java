@@ -2,21 +2,23 @@ public class xando
 {
 	public static void main(String[]args)
 	{
+		String options = "xo";
 		String [][] xAndo = new String [4][4];
-		int spot = 0;
-		for(int i = 0; i < xAndo.length; i ++)
+		
+		for(int i = 0; i < xAndo.length; i++)
 		{
-			for(int j = 0; j < xAndo[i].length; j ++)
+			for(int j = 0; j < xAndo[i].length; j++)
 			{
-				int pick =(int)(Math.random()*2)+1;
-			    spot ++;
+				int pick =(int)(Math.random()*2 + 1);
 				if(pick == 1)
 				{
 					xAndo[i][j] = "x";
 				}
 				else
+				{
 					xAndo[i][j] = "o";
-				System.out.println(xAndo[i][j] + "\t");
+				}
+				System.out.print(xAndo[i][j] + "\t");
 			}
 			System.out.println();
 		}

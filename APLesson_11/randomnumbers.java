@@ -2,14 +2,13 @@ public class randomnumbers
 {
 	public static void main(String[]args)
 	{
-		int[][]values = new int [4][4];
-		int num = 1;
+		int[][]values = new int[4][4];
+		
 		for(int i = 0; i < values.length; i ++)
 		{
 			for(int j = 0; j < values[i].length; j ++)
 			{
-				values[i][j] =(int)(Math.random()*100)+1;
-				num ++;
+				values[i][j] =(int)(Math.random()*100);
 			}
 		}
 		for(int i = 0; i < values.length; i ++)

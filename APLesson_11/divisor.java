@@ -14,8 +14,9 @@ public class divisor
 			{
 				nums[i][j] =(int)(Math.random()*100)+1;
 				num ++;
-				System.out.println(nums[i][j]);
+				System.out.print(nums[i][j]);
 			}
+			System.out.println();
 		}
 		System.out.println();
 		int count = 0;

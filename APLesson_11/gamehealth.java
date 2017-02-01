@@ -11,14 +11,14 @@ public class gamehealth
 		int damage = 0;
 		int amount = 0;
 		healthcount = 6;
-		health = new String[healthload];
+		health = new String [healthload];
 		while(turn != "Q" && healthcount > 0)
 		{
 			System.out.println("Your turn! Hit Enter when ready: ");
 			turn = kb.nextLine();
-			damage = (int)(Math.random()*2)+1;
-			amount = (int)(Math.random()*6)+1;
-			takeDamage(damage, amount);
+			damage = (int)(Math.random()*2 + 1);
+			amount = (int)(Math.random()*6 + 1);
+			System.out.println(takeDamage(damage, amount));
 			printClip();
 		}
 		System.out.println("You died!!!");
@@ -28,13 +28,17 @@ public class gamehealth
 		if(dmg ==1)
 		{
 			healthcount -= amt;
-		return "Taking [amt] damage!";
+		return ("Taking " + amt + " damage!");
 		}
 		if(healthcount + amt < healthload)
+		{
 			healthcount += amt;
+		}
 		else
+		{
 			healthcount = healthload;
-		return "Power Up [amt]!";
+		}
+		return ("Power Up " + amt + "!");
 	}
 	public static void printClip()
 	{
@@ -43,7 +47,7 @@ public class gamehealth
 		{
 			if(i < healthcount)
 			{
-				health[i] = " @ ";
+				health[i] = "@";
 			}
 			else
 				health[i] = "[]";
