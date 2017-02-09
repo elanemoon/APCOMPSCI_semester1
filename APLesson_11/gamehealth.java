@@ -12,7 +12,7 @@ public class gamehealth
 		int amount = 0;
 		healthcount = 6;
 		health = new String [healthload];
-		while(turn != "Q" && healthcount > 0)
+		while(!turn.equals("Q") && healthcount > 0)
 		{
 			System.out.println("Your turn! Hit Enter when ready: ");
 			turn = kb.nextLine();
@@ -28,7 +28,7 @@ public class gamehealth
 		if(dmg ==1)
 		{
 			healthcount -= amt;
-		return ("Taking " + amt + " damage!");
+		    return ("Taking " + amt + " damage!");
 		}
 		if(healthcount + amt < healthload)
 		{
@@ -52,7 +52,7 @@ public class gamehealth
 			else
 				health[i] = "[]";
 			output += health[i];
-			System.out.println(output);
 		}
+		System.out.println(output);
 	}
 }
