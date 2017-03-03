@@ -7,6 +7,7 @@ public class walkup extends ticket
 		super();
 	}
 	
+	
 	public int getPrice()
 	{
 		return 50;

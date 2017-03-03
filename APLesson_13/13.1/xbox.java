@@ -1,5 +1,6 @@
 public class xbox extends console
 {
+
 	private String xbox;
 	
 	public xbox()
