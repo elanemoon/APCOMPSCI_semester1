@@ -16,15 +16,61 @@ public class Magpie2
 		String response = "";
 		
 		 if(statement.length() == 0)
-	 {
-		 response = "Say something please";
-	 }
+	    {
+		    response = "Say something please";
+	    }
+	     else if (findKeyword(statement, "I want to", 0) >= 0)
+          {
+               response = transformIWantToStatement(statement);
+          }
+
+
+         else
+       {
+ 
+         int psn = findKeyword(statement, "you", 0);
+
+
+         if (psn >= 0
+        && findKeyword(statement, "me", psn) >= 0)
+       {
+          response = transformYouMeStatement(statement);
+       }
+         else
+       {
+             response = getRandomResponse();
+       }
+       }
+return response;
+
 		
 	public String saysomething()
 	{
 		System.out.println("Say something, please.");
 		
 	}
+	private String transformIWantToStatement(String statement)
+{
+	String phrase = statement.trim().toLowerCase();
+		goal = goal.toLowerCase();
+
+		int psn = phrase.indexOf(goal, startPos);
+
+    trim(statement);
+    String lastChar = last character in statement;
+    if (lastChar is a period)
+	{
+		remove the last character from statement
+	}
+	
+   * Set new int psn to the result from...
+   *        findKeyword() method @param statement, goal is "I want to "
+   * Set new String restOfStatement to the rest of statement after the
+   * "I want to ".
+   * /
+        return "What would it mean to" + restOfStatement;
+}
+
     
 		/** Exercise_01:
 		 * ==================================================
