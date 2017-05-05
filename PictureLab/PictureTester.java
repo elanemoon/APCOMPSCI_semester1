@@ -37,12 +37,49 @@ public class PictureTester
   
   public static void testMirrorVerticalRightToLeft()
   {
-	Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorVertical();
-    caterpillar.explore();
+	Picture beach = new Picture("beach.jpg");
+	beach.explore();
+	beach.mirrorVerticalRightToLeft();
+	beach.explore();
+  }
+  public static void testMirrorHorizontal()
+  {
+	Picture motorcycle = new Picture("motorcycle.jpg");
+    motorcyle.explore();
+    motorcyle.mirrorHorizontal();
+    motorcycle.explore();
+  }
+  public static void testMirrorHorizontalBotToTop(
+  {
+    Picture motorcycle = new Picture("motorcycle.jpg");
+    motorcyle.explore();
+    motorcyle.mirrorHorizontalBotToTop();
+    motorcycle.explore();
+  )
+  
+  public static void testMirrorTemple()
+  {
+	  Picture temple = new Picture("temple.jpg");
+	  temple.explore();
+	  temple.mirrorTemple();
+	  temple.explore();
   }
   
+  public static void testMirrorArms()
+  {
+	  Picture snowman = new Picture("snowman.jpg");
+	  snowman.explore();
+	  snowman.mirrorTemple();
+	  snowman.explore(); 
+  }
+  
+  public static void testMirrorGull()
+  {
+	  Picture gull = new Picture("seagull.jpg");
+	  gull.explore();
+	  gull.mirrorGull();
+	  gull.explore(); 
+  }
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -59,21 +96,62 @@ public class PictureTester
     swan.explore();
   }
   
-  public void keepOnlyBlue()
+  public void testKeepOnlyBlue()
   {
-	 Pixel[][] pixels = this.getPixels2D();
-	 for (Pixel[] rowArray : pixels)
-	 {
-		 for (Pixel pixelObj : rowArray)
-		 {
-			 pixelObj.setRed(0);
-			 pixelObj.setGreen(0);
-		 }
-	 }
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.KeepOnlyBlue();
+    beach.explore();
+  }
+  public static void testNegate()
+  {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.Negate();
+    beach.explore();
   }
   
+  public static void testGrayscale()
+  {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.Grayscale();
+    beach.explore();
+  }
   
+  public static void testFixUnderwater()
+  {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.FixUnderwater();
+    beach.explore(); 
+  }
   
+  public static void testCollage()
+  {
+	  Picture canvas = newPicture("640x480.jpg");
+	  canvas.createCollage();
+	  canvas.explore();
+  }
+  
+  public static void testmyCollage()
+  {
+	  
+  }
+  public static void testCopy()
+  {
+	  Picture canvas = newPicture("640x480.jpg");
+	  canvas.createCollage();
+	  canvas.explore(); 
+  }
+  
+  public static void testEdgeDetection()
+  {
+	  Picture swan = new Picture("swan.jpg");
+	  swan.explore();
+	  swan.edgeDetection(27);
+	  swan.explore();
+  }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -81,21 +159,23 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	keepOnlyBlue();
+	testMirrorHorizontalBotToTop();
+	testMirrorVerticalRightToLeft();
+	testMirrorHorizontal();
     testZeroBlue();
-    //testKeepOnlyBlue();
+    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
+    testNegate();
+    testGrayscale();
+    testFixUnderwater();
     testMirrorVertical();
-    //testMirrorTemple();
-    //testMirrorArms();
+    testMirrorTemple();
+    testMirrorArms();
     testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
-    //testCopy();
+    testCollage();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();

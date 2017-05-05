@@ -28,15 +28,7 @@ public class IntArrayWorker
     return total;
   }
   
-  public int getCount()
-   {
-    IntArrayWorker worker = new IntArrayWorker();
-    int[][] nums = new int[3][4];
-    worker.setMatrix(nums);
-    worker.fillPattern1();
-    int count = worker.getCount(1);
-    System.out.println("Count should be 6 and count is " + count);
- }
+
   /**
    * Method to return the total using a nested for-each loop
    * @return the total of the values in the array
@@ -107,5 +99,41 @@ public class IntArrayWorker
       }
     }
   }
+  
+  public int getCount(int checkNum)
+  {
+	  int count = 0;
+	  for(int row = 0; row < matrix.length; row++)
+	  {
+		  for(int col = 0; col < matrix[0].length; col++)
+		  {
+			  if(matrix[row][col] == checkNum) count++;
+		  }
+	  }
+	  return count;
+  }
+  
+  public int getLargest()
+   {
+    int largest = 0;
+	for(int row = 0; row < matrix.length; row++)
+	{
+		for (int col = 0; col < matrix[0].length; col++)
+      {
+        if(matrix[row][col] > largest) largest = matrix[row][col];
+      }
+	}
+	return largest;
+   }
+   
+   public int getColTotal(int col)
+   {
+	   int total = 0;
+	   for(int row = 0; row < matrix.length; row++)
+	   {
+		   total += matrix[row][col];
+	   }
+	   return total;
+   }
  
 }
