@@ -102,7 +102,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
   public PictureExplorer(DigitalPicture picture)
   {
     // set the fields
-    this.picture=picture;
+    this.picture = picture;
     zoomFactor=1;
     
     // create the window and set things up

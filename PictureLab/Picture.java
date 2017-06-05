@@ -111,7 +111,7 @@ public class Picture extends SimplePicture
       }
   }
   
-  pulic void Negate()
+  public void Negate()
   {
 	   Pixel[][] pixels = this.getPixels2D();
 	   for (Pixel[] rowArray : pixels)
@@ -164,7 +164,7 @@ public class Picture extends SimplePicture
     * vertical mirror in the center of the picture
     * from left to right */
 	
-  public void mirror VerticalRightToLeft()
+  public void mirrorVerticalRightToLeft()
   {
 	  Pixel[][] pixels = this.getPixels2D();
 	  Pixel leftPixel = null;
@@ -363,7 +363,7 @@ public class Picture extends SimplePicture
     this.copy(flower2,100,0);
     this.copy(flower1,200,0);
     Picture flowerNoBlue = new Picture(flower2);
-    flowerNoBlue.zeroBlue();
+    flowerNoBlue.ZeroBlue();
     this.copy(flowerNoBlue,300,0);
     this.copy(flower1,400,0);
     this.copy(flower2,500,0);
@@ -374,7 +374,7 @@ public class Picture extends SimplePicture
   public void myCollage()
   {
 	  Picture flower1 = new Picture("flower1.jpg");
-	  this.copy2(folower1,10,20,0,100);
+	  this.copy2(flower1,10,20,0,100);
 	  this.write("mycollage.jpg");
   }
   
@@ -416,7 +416,7 @@ public class Picture extends SimplePicture
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
-    beach.zeroBlue();
+    beach.ZeroBlue();
     beach.explore();
   }
   

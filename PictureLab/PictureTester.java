@@ -13,7 +13,7 @@ public class PictureTester
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
-    beach.zeroBlue();
+    beach.ZeroBlue();
     beach.explore();
   }
   
@@ -44,25 +44,17 @@ public class PictureTester
   }
   public static void testMirrorHorizontal()
   {
-	Picture motorcycle = new Picture("motorcycle.jpg");
+	Picture motorcycle = new Picture("blueMotorcycle.jpg");
     motorcyle.explore();
     motorcyle.mirrorHorizontal();
     motorcycle.explore();
   }
-  public static void testMirrorHorizontalBotToTop(
+  public static void testMirrorHorizontalBotToTop()
   {
-    Picture motorcycle = new Picture("motorcycle.jpg");
+    Picture motorcycle = new Picture("blueMotorcycle.jpg");
     motorcyle.explore();
     motorcyle.mirrorHorizontalBotToTop();
     motorcycle.explore();
-  )
-  
-  public static void testMirrorTemple()
-  {
-	  Picture temple = new Picture("temple.jpg");
-	  temple.explore();
-	  temple.mirrorTemple();
-	  temple.explore();
   }
   
   public static void testMirrorArms()
@@ -77,7 +69,7 @@ public class PictureTester
   {
 	  Picture gull = new Picture("seagull.jpg");
 	  gull.explore();
-	  gull.mirrorGull();
+	  gull.MirrorGull();
 	  gull.explore(); 
   }
   /** Method to test the collage method */
@@ -91,9 +83,10 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
-    swan.edgeDetection(10);
-    swan.explore();
+	  Picture swan = new Picture("swan.jpg");
+	  swan.explore();
+	  swan.edgeDetection(27);
+	  swan.explore();
   }
   
   public void testKeepOnlyBlue()
@@ -127,31 +120,18 @@ public class PictureTester
     beach.explore(); 
   }
   
-  public static void testCollage()
-  {
-	  Picture canvas = newPicture("640x480.jpg");
-	  canvas.createCollage();
-	  canvas.explore();
-  }
-  
   public static void testmyCollage()
   {
 	  
   }
   public static void testCopy()
   {
-	  Picture canvas = newPicture("640x480.jpg");
+	  Picture canvas = new Picture("640x480.jpg");
 	  canvas.createCollage();
 	  canvas.explore(); 
   }
   
-  public static void testEdgeDetection()
-  {
-	  Picture swan = new Picture("swan.jpg");
-	  swan.explore();
-	  swan.edgeDetection(27);
-	  swan.explore();
-  }
+ 
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -163,7 +143,7 @@ public class PictureTester
 	testMirrorVerticalRightToLeft();
 	testMirrorHorizontal();
     testZeroBlue();
-    testKeepOnlyBlue();
+    //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     testNegate();
