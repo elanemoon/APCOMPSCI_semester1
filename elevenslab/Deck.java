@@ -29,13 +29,19 @@ public class Deck {
 	 * @param suits is an array containing all of the card suits.
 	 * @param values is an array containing all of the card point values.
 	 */
-	public Deck(String[] ranks, String[] suits, int[] values) {
-		for(int i = 0; i < ranks.length(); i++)
+	public Deck(String[] ranks, String[] suits, int[] values)
+	{
+		cards = new ArrayList<Card>();
+		for(int j = 0; j < cards.size(); j++)
 		{
-			Card card = new Card(ranks[i], suits[i], values[i]);
-			cards[i] = card;
+			for(String suitString : suits)
+			{
+				Card ca = new Card(ranks[j], suitString, values[j]);
+			    cards.add(ca);
+			}
 		}
 		size = cards.size();
+		shuffle();
 	}
 
 
@@ -43,15 +49,17 @@ public class Deck {
 	 * Determines if this deck is empty (no undealt cards).
 	 * @return true if this deck is empty, false otherwise.
 	 */
-	public boolean isEmpty() {
-		return cards.isEmpty();
+	public boolean isEmpty() 
+	{
+		return size == 0;
 	}
 
 	/**
 	 * Accesses the number of undealt cards in this deck.
 	 * @return the number of undealt cards in this deck.
 	 */
-	public int size() {
+	public int size() 
+	{
 		return cards.size();
 	}
 
@@ -59,13 +67,14 @@ public class Deck {
 	 * Randomly permute the given collection of cards
 	 * and reset the size to represent the entire deck.
 	 */
-	public void shuffle() {
-		for(int k = valueCount - 1; k >= 0; k--)
+	public void shuffle() 
+	{
+		for(int k = size -1; k >= 0; k--)
 		{
 			int r = (int)(Math.random() * k);
-			int temp = values[r];
-			values[r] = values[k];
-			values[k] = temp;
+			Card temp = cards.get(r);
+			cards.set(r, cards.get(k));
+			cards.set(k, temp);
 		}
 	}
 
@@ -74,14 +83,15 @@ public class Deck {
 	 * @return the card just dealt, or null if all the cards have been
 	 *         previously dealt.
 	 */
-	public Card deal() {
+	public Card deal() 
+	{
 		if(isEmpty())
 		{
 			return null;
 		}
 		size--;
-		Card c = cards.get(size);
-		return c;
+		Card ab = cards.get(size);
+		return ab;
 	}
 
 	/**
@@ -89,7 +99,8 @@ public class Deck {
 	 * @return a string representation of this deck.
 	 */
 	@Override
-	public String toString() {
+	public String toString() 
+	{
 		String rtn = "size = " + size + "\nUndealt cards: \n";
 
 		for (int k = size - 1; k >= 0; k--) {
